@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit employee</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+
+</head>
+<body>
+
+    <h2>Edit employee</h2>
+    <form method="POST" action="/manage/peopleedit">
+
+        jobtitle: <input name="job_field" value ="<%= emplyee[0].job_details %>">
+
+        <input name="id_field" readonly value="<%= emplyee[0].id %>">
+
+        <input type="submit" value="edit">
+
+    </form>
+
+
+    
+</body>
+</html>

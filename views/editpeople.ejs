@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>employees</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+</head>
+
+<body>
+  <header>
+    <h4>manage employees</h4>
+    <p><a href='/'>home</a> | <a href='/logout'>logout</a> </p>
+  </header>
+  <main>
+    <table class="primary">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% emplyees.forEach(employee => { %>
+        <tr>
+          <td><%= `${employee.first_name} ${employee.last_name}` %></td>
+          <td><%= employee.job_details %></td>
+          <td>view</td>
+          <td>
+            <a href="/manage/peopleedit?eid= <%= employee.id %>">edit</a>
+          </td>
+          <td>delete</td>
+        </tr>
+        <% }); %>
+
+      </tbody>
+
+    </table>
+
+
+  </main>
+  <footer>
+    <p>Simple Company</p>
+  </footer>
+</body>
+
+</html>
